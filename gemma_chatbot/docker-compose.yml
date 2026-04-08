@@ -36,6 +36,7 @@ services:
       - --trust-remote-code
       - --enforce-eager
       - --enable-auto-tool-choice
+      - --enable-reasoning
       - --tool-call-parser 
       - gemma4
       - --reasoning-parser
