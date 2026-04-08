@@ -3,9 +3,9 @@ docker run --rm -it \
   --name gemma-serve \
   --gpus all \
   --ipc=host \
-  -v $HOME/models/gemma4-31b:/workspace/ \
+  -v $HOME/models/gemma4-26b:/workspace/ \
   -p 8000:8000 \
-  vllm/vllm-openai:v0.18.1-aarch64-cu130 \
+  vllm/vllm-openai:gemma4-cu130 \
     --model /workspace \
     --served-model-name gemma4 \
     --host 0.0.0.0 \
