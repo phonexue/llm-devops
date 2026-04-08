@@ -1,0 +1,7 @@
+kv_cache_config:
+  enable_block_reuse: false
+cuda_graph_config:
+  max_batch_size: 4 
+  max_seq_len_in_batch: 1024
+  padding_enabled: true
+  padded_num_tokens: 64
