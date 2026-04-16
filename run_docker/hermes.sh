@@ -2,4 +2,6 @@
 docker run --rm -dt \
   --name hermes \
   --network host \
-  ubuntu:hermes-agent
+  --restart unless-stopped \
+  ubuntu:hermes-agent \
+  /root/.local/bin/hermes gateway run
