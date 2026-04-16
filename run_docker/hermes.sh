@@ -1,5 +1,5 @@
 #!/bin/bash
-docker run --rm -dt \
+docker run -d \
   --name hermes \
   --network host \
   --restart unless-stopped \
