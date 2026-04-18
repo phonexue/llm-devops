@@ -1,8 +1,9 @@
 #!/bin/bash
-docker run --rm -d \
+docker run -d \
   --name gemma4-serve \
   --gpus all \
   --ipc=host \
+  --restart=unless-stopped \
   -v $HOME/models/gemma4-26b:/workspace \
   -p 8000:8000 \
   vllm/vllm-openai:gemma4-cu130 \
