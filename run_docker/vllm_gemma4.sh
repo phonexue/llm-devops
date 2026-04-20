@@ -12,12 +12,12 @@ docker run -d \
     --host 0.0.0.0 \
     --port 8000 \
     --dtype auto \
-    --max-model-len 256000 \
+    --max-model-len 128000 \
     --max-num-batched-tokens 1024 \
-    --max-num-seqs 16 \
+    --max-num-seqs 8 \
     --enable-chunked-prefill \
     --enable-prefix-caching \
-    --gpu-memory-utilization 0.6 \
+    --gpu-memory-utilization 0.45 \
     --trust-remote-code \
     --tensor-parallel-size 1 \
     --api-key free-key \
