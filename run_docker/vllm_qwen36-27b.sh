@@ -1,6 +1,6 @@
 #!/bin/bash
 docker run -d \
-  --name qwen36-server \
+  --name qwen3.6-dn \
   --gpus all \
   --ipc=host \
   --restart=unless-stopped \
@@ -8,7 +8,7 @@ docker run -d \
   -p 8001:8001 \
   vllm/vllm-openai:v0.19.1-aarch64-cu130 \
     /workspace \
-    --served-model-name qwen3.6 \
+    --served-model-name qwen3.6-dn \
     --host 0.0.0.0 \
     --port 8001 \
     --dtype auto \
@@ -22,6 +22,8 @@ docker run -d \
     --tensor-parallel-size 1 \
     --api-key free-key \
     --enforce-eager \
+    --disable-flash-attn \
     --enable-auto-tool-choice \
     --tool-call-parser qwen3_coder \
-    --reasoning-parser qwen3 
+    --reasoning-parser qwen3 \
+    --default-chat-template-kwargs '{"enable_thinking": false}'
