@@ -22,7 +22,7 @@ docker run -d \
     --tensor-parallel-size 1 \
     --api-key free-key \
     --enforce-eager \
-    --disable-flash-attn \
+    --attention-backend TRITON_ATTN \
     --enable-auto-tool-choice \
     --tool-call-parser qwen3_coder \
     --reasoning-parser qwen3 \
