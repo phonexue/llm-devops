@@ -6,4 +6,4 @@ docker run -d \
   -e TZ=Asia/Shanghai \
   -p 8642:8642 \
   nousresearch/hermes-agent \
-  hermes gateway run
+  gateway run
